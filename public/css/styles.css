@@ -93,6 +93,7 @@ button:disabled {
 
 .chat {
     display: flex;
+    height: 100vh;
 }
 
 .chat__sidebar {
@@ -100,7 +101,8 @@ button:disabled {
     color: white;
     background: #333744;
     width: 225px;
-    overflow-y: scroll
+    overflow-y: scroll;
+    border: 1px solid yellowgreen;
 }
 
 /* Chat styles */
@@ -110,6 +112,7 @@ button:disabled {
     display: flex;
     flex-direction: column;
     max-height: 100vh;
+    border: 1px solid red;
 }
 
 .chat__messages {
@@ -146,7 +149,7 @@ button:disabled {
     padding: 0.5rem;
     margin-right: 35vw;
     background-color: skyblue;
-    border-radius: 5px 5px 5px 20px;
+    border-radius: 20px 20px 20px 0px;
     box-shadow: 2px 2px 10px rgb(117, 117, 152);
 }
 
@@ -196,6 +199,15 @@ button:disabled {
     font-size: 14px;
 }
 
+.send_btn::before {
+    content: "Send";
+}
+
+.send_location::before {
+    content: "Send Location";
+}
+
+
 /* Chat Sidebar Styles */
 
 .room-title {
@@ -217,3 +229,80 @@ button:disabled {
     font-weight: 300;
     padding: 12px 24px 0 24px;
 }
+
+
+@media only screen and (max-width:768px){
+    
+    .centered-form__box {
+        width: 90vw;
+    }
+}
+
+@media only screen and (max-width:768px){
+    
+    .centered-form__box {
+        width: 90vw;
+    }
+}
+
+@media only screen and (max-width:768px){
+    
+    .centered-form__box {
+        width: 80vw;
+    }
+}
+
+@media only screen and (max-width:480px){
+    
+    .centered-form__box {
+        width: 100vw;
+    }
+
+
+    .chat__sidebar {
+        display: none;
+        
+    }
+
+    .chat__messages {
+        padding: 5px;
+    }
+
+    .owner {
+        margin-left: 18vw;
+    }
+
+    .other {
+        margin-right: 18vw;
+    }
+
+    .compose {
+        padding: 10px;
+    }
+
+    button {
+        padding: 5px;
+        background-color: transparent;
+
+    }
+
+    .send_btn:hover {
+        background-color: lightblue;
+    }
+
+    .send_location:hover {
+        background-color:chocolate;
+    }
+
+    .send_btn::before {
+        content: url(../img/send-message.png);
+    }
+
+    .send_location::before {
+        content: url(../img/placeholder.png);
+        background-color: transparent;
+
+    }
+}
+
+
