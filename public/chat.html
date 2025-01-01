@@ -9,13 +9,12 @@
     
 </head>
 <body>
-    
+
     <div class="chat">
         <div id="sidebar" class="chat__sidebar">
-
+            
         </div>
         <div class="chat__main">
-
             <div id="message-div" class="chat__messages">
             </div>
             
@@ -35,21 +34,17 @@
     
     <div id="message-template" style="display: none;" type="text/html">
         <div class="message" id="th">
-            <p>
-                <span class="message__name">{{username}}</span>
-                <span class="message__meta">{{createdAt}}</span>
-            </p>
+            <p class="message__name">{{username}}</p>
             <p class="message_left">{{message}}</p>
+            <div class="message__meta">{{createdAt}}</div>
         </div>
     </div>
 
     <div id="location-message" style="display: none;" type="text/html">
         <div class="location">
-            <p>
-                <span class="message__name">{{username}}</span>
-                <span class="message__meta">{{createdAt}}</span>
-            </p>
+            <p class="message__name">{{username}}</p>
             <p class="message_left"><a href="{{url}}" target="_blank">My Location</a></p>
+            <div class="message__meta">{{createdAt}}</div>
         </div>
     </div>
 

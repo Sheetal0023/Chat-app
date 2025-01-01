@@ -18,11 +18,7 @@ input {
 
 body {
     line-height: 1.4;
-    color: #333333;
     font-family: Helvetica, Arial, sans-serif;
-    background-image: url("../img/pngwing.com\ \(2\).png");
-    background-color: gray;
-
 }
 
 h1 {
@@ -102,24 +98,24 @@ button:disabled {
     background: #333744;
     width: 225px;
     overflow-y: scroll;
-    border: 1px solid yellowgreen;
 }
 
 /* Chat styles */
+
 
 .chat__main {
     flex-grow: 1;
     display: flex;
     flex-direction: column;
     max-height: 100vh;
-    border: 1px solid red;
+    background: linear-gradient(to bottom, rgba(50, 50, 50, 0.7), rgba(100, 100, 100, 0.6)), url(../img/background_chat.jpg);
 }
+
 
 .chat__messages {
     flex-grow: 1;
     padding: 24px 24px 0 24px;
     overflow-y: scroll;
-    /* background-position: center; */
     background-size: contain;
     background-repeat: repeat;
 }
@@ -133,6 +129,7 @@ button:disabled {
 .message {
     margin-bottom: 16px;   
 }
+
 
 .owner {
     text-align: end;
@@ -164,9 +161,12 @@ button:disabled {
 }
 
 .message__meta {
-    color: black;
-    font-size: 14px;
+    text-align: right;
+    color: darkslategray;
+    font-size: 12px;
+    margin-top: -20px;
 }
+
 
 .message a {
     color: #0070CC;
@@ -258,10 +258,54 @@ button:disabled {
         width: 100vw;
     }
 
+    .chat {
+        display: flex;
+        flex-direction: column;
+        background:linear-gradient(to right, rgba(50, 50, 50, 0.7), rgba(50, 50, 50, 0.7)), url('../img/background_chat.jpg');
+
+    }
 
     .chat__sidebar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        display: flex;
+        align-items: center;
+        width:100%;
+        height:50px ;
+        overflow-y: hidden; 
+        background: rgba(51, 55, 68, 0.4);       
+    }
+
+    .room-title {
+        padding: 16px; 
+        font-size: 25px;
+        border-right: 4px solid white;
+
+    }
+
+    .list-title {
         display: none;
-        
+    }
+
+    .users {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        overflow-x: scroll;
+        padding: 20px 10px;
+    }
+
+    .users li {
+        margin-left: 10px;
+        background-color: #F7F7FA;
+        color: #333744;
+        padding: 5px;
+        border-radius: 13px;
+    }
+
+    .chat__main {
+        margin-top: 50px ;
     }
 
     .chat__messages {
@@ -286,16 +330,18 @@ button:disabled {
 
     }
 
+    
+
     .send_btn:hover {
-        background-color: lightblue;
+        background-color: transparent;
     }
 
     .send_location:hover {
-        background-color:chocolate;
+        background-color: transparent;
     }
 
     .send_btn::before {
-        content: url(../img/send-message.png);
+        content: url(../img/file.png);
     }
 
     .send_location::before {
